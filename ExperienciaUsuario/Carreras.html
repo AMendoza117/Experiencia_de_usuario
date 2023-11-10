@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/ola.css">
+</head>
+<body>
+    <div>
+        <nav>
+            <img src="./assets/logoutng.webp" alt="Logo UTNG" class="logo" style="margin: 20px;">
+            <ul>
+                <li><a href="Inicio.html">Inicio</a></li>
+                <li><a class="active" href="Carreras.html">Carreras</a></li>
+                <li><a href="">Becas</a></li>
+                <li><a href="Nosotros.html">Nosotros</a></li>
+                <li><a href="Dudas.html">Dudas</a></li>
+                <li><a href="Exitos.html">Éxitos</a></li>
+                <li><a href="">Accesibilidad</a></li>
+            </ul>
+        </nav>
+        <section>
+            <div class="container">
+                <div class="search-bar">
+                    <input type="text" class="search-input" placeholder="Buscar...">
+                    <button class="filter-button" onclick="openModal()">Filtros</button>
+                </div>
+        
+                <div class="card-container">
+                    <div class="card">
+                        <img src="assets/tics.jpg" alt="Imagen 1">
+                        <h2>Desarrollo de Software Multiplataforma</h2>
+                    </div>
+        
+                    <div class="card">
+                        <img src="assets/redes.jpg" alt="Imagen 2">
+                        <h2>Infraestructura de Redes Digitales</h2>
+                    </div>
+
+                    <div class="card">
+                        <img src="assets/entornos.jpg" alt="Imagen 2">
+                        <h2>Entornos Virtuales y Negocios Digitales</h2>
+                    </div>
+
+                    <div class="card">
+                        <img src="assets/diseno.jpg" alt="Imagen 2">
+                        <h2>Diseño Digital</h2>
+                    </div>
+
+                    <div class="card">
+                        <img src="assets/contaduria.jpg" alt="Imagen 2">
+                        <h2>Contaduría</h2>
+                    </div>
+
+                    <div class="card">
+                        <img src="assets/turismo.jpg" alt="Imagen 2">
+                        <h2>Turismo</h2>
+                    </div>
+
+                    <div class="card">
+                        <img src="assets/admin.jpg" alt="Imagen 2">
+                        <h2>Infraestructura de Redes Digitales</h2>
+                    </div>
+
+                    <div class="card">
+                        <img src="assets/manuf.jpg" alt="Imagen 2">
+                        <h2>Administración Área Capital Humano</h2>
+                    </div>
+        
+                    <!-- Puedes agregar más cartas según sea necesario -->
+        
+                </div>
+        
+            </div>
+            <!-- Modal -->
+            <div id="filterModal" class="modal">
+                <div class="modal-content">
+                    <span class="close" onclick="closeModal()">&times;</span>
+                    <h2>Filtros</h2>
+
+                    <!-- Dropdown con 3 opciones -->
+                    <div class="dropdown">
+                        <label for="selectDegree">Area:</label>
+                        <select id="selectDegree">
+                            <option value="todos">TI</option>
+                            <option value="pregrado">EA</option>
+                            <option value="posgrado">IEE</option>
+                        </select>
+                    </div>
+        
+                    <!-- Radio buttons en grupo -->
+                    <div class="radio-group">
+                        <label>Nivel de Estudio:</label><br>
+                        <label for="ingenieria">Ingeniería</label>
+                        <input type="radio" id="ingenieria" name="nivelEstudio" value="ingenieria">
+        
+                        <label for="tsu">TSU</label>
+                        <input type="radio" id="tsu" name="nivelEstudio" value="tsu">
+        
+                        <label for="licenciatura">Licenciatura</label>
+                        <input type="radio" id="licenciatura" name="nivelEstudio" value="licenciatura">
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                function openModal() {
+                    document.getElementById("filterModal").style.display = "flex";
+                }
+
+                function closeModal() {
+                    document.getElementById("filterModal").style.display = "none";
+                }
+
+                // Cierra el modal si se hace clic fuera de él
+                window.onclick = function (event) {
+                    var modal = document.getElementById("filterModal");
+                    if (event.target === modal) {
+                        modal.style.display = "none";
+                    }
+                };
+            </script>
+
+        </section>
+    </div>
+
+</body>
+</html>
