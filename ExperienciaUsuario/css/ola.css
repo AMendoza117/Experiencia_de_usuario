@@ -1,44 +1,70 @@
-*{
+* {
     padding: 0;
     margin: 0;
     text-decoration: none;
     list-style: none;
     box-sizing: border-box;
 }
-body{
+
+body {
     font-family: helvetica;
 }
-nav{
+
+nav {
     background-color: #003366;
     height: 80px;
     width: 100%;
 }
-label.logo{
+
+label.logo {
     line-height: 80px;
     padding: 0 100px;
     margin: 20px;
 }
-nav ul{
+
+nav ul {
     float: right;
     margin-right: 20px;
 }
-nav ul li{
+
+nav ul li {
     display: inline-block;
     line-height: 80px;
     margin: 0 5px;
 }
-nav ul li a{
+
+nav ul li a {
     color: white;
     font-size: 17px;
     padding: 7px 13px;
     border-radius: 3px;
     text-transform: uppercase;
 }
-a.active,a:hover{
+
+a.active,
+a:hover {
     background: #66ff66;
     transition: .5s;
 }
-section{
- background: #F5F5F5;
- background-size: cover;   
+
+section {
+    background: #F5F5F5;
+    background-size: cover;
+    position: absolute; /* Añade esta línea para posicionar de manera absoluta */
+    top: 80px; /* La altura del nav, para que la sección comience después del nav */
+    left: 0;
+    right: 0;
+    bottom: 0;
 }
+
+/* Añade un contenedor para la sección para centrar su contenido */
+.container {
+    text-align: center;
+}
+
+/* Añade estilos para el acordeón */
+.accordion {
+    max-width: 600px; /* Ajusta según sea necesario */
+    margin: auto;
+}
+
