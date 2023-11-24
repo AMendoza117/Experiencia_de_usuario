@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="./css/ola.css">
+    <link rel="stylesheet" href="./css/accesibilidad.css">
+</head>
+<body>
+    <nav>
+        <img src="./assets/logoutng.webp" alt="Logo UTNG" class="logo" style="margin: 20px;">
+        <ul>
+            <li><a class="active" href="Inicio.html">Inicio</a></li>
+            <li><a href="Carreras.html">Carreras</a></li>
+            <li><a href="Becas.html">Becas</a></li>
+            <li><a href="Nosotros.html">Nosotros</a></li>
+            <li><a href="Dudas.html">Dudas</a></li>
+            <li><a href="Exitos.html">Éxitos</a></li>
+            <li><a href="Accesibilidad.html">Accesibilidad</a></li>
+        </ul>
+    </nav>
+    <br>
+    <div>
+        <table>
+            <tr><td><img src="./assets/2.png" alt="Imagen 1" width="250px" height="250px"></td></tr>
+            <tr><td class="texto-aumentado">Dictado</td></tr>
+            <tr><td><button class="ver-button1" onclick="simularClic1()">Clic</button></td></tr>
+        </table>
+        <table>
+            <tr><td><img src="./assets/1.png" alt="Imagen 1" width="250px" height="250px"></td></tr>
+            <tr><td class="texto-aumentado">Microfono</td></tr>
+            <tr><td><button class="ver-button2" onclick="simularClic2()">Clic</button></td></tr>
+        </table>
+        <table>
+            <tr><td><img src="./assets/3.png" alt="Imagen 1" width="250px" height="250px"></td></tr>
+            <tr><td class="texto-aumentado">Subtitulos</td></tr>
+            <tr><td><button class="ver-button3" onclick="simularClic3()">Clic</button></td></tr>
+        </table>
+        <table>
+            <tr><td><img src="./assets/4.png" alt="Imagen 1" width="250px" height="250px"></td></tr>
+            <tr><td class="texto-aumentado">Aumentar Letra</td></tr>
+            <tr><td><button class="ver-button4" onclick="simularClic4()">Clic</button></td></tr>
+        </table>  
+    </div>
+</body>
+<script>
+    function simularClic1() {
+        var mensajeDiv = document.createElement('div');
+        mensajeDiv.textContent = '(!sound!)';
+        document.body.appendChild(mensajeDiv);
+        setTimeout(function() {
+            document.body.removeChild(mensajeDiv);
+        }, 4000);
+    }
+    function simularClic2() {
+        var boton = document.querySelector('.ver-button2');
+        boton.style.backgroundColor = '#ff9900';
+        setTimeout(function() {
+            boton.style.backgroundColor = '#cacabe'; 
+        }, 2000); 
+    }
+    function simularClic3() {
+        var mensajeDiv = document.createElement('div');
+        mensajeDiv.textContent = 'En la pantalla se muestran las siguientes opciones de accesibilidad [Dictado] [Microfono] [Subtitulos] [Tamaño Fuente]';
+        document.body.appendChild(mensajeDiv);
+        setTimeout(function() {
+            document.body.removeChild(mensajeDiv);
+        }, 4000);
+    }
+    function simularClic4() {
+        var texto = document.querySelector('.texto-aumentado');
+        var nuevoTamano = parseInt(window.getComputedStyle(texto).fontSize) + 2;
+        texto.style.fontSize = nuevoTamano + 'px';
+    }
+</script>
+
+</html>
