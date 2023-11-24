@@ -72,7 +72,7 @@ section {
     max-width: 800px;
     margin: 20px auto;
     padding: 20px;
-    background-color: #fff;
+    /*background-color: #fff;*/
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     border-radius: 5px;
 }
@@ -166,4 +166,28 @@ section {
 
 .radio-group input {
     margin-right: 5px;
+}
+
+.search-container {
+    display: flex;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 300px;
+}
+
+.search-input {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+}
+
+.search-button {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    cursor: pointer;
 }
